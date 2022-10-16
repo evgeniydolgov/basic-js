@@ -167,7 +167,6 @@ describe('Extended repeater', () => {
 
       assert.equal(repeater(objWithSpecificCoercion, { repeatTimes: 2, addition: objWithSpecificCoercion }), 'STRING_OR_DEFAULTSTRING_OR_DEFAULT+STRING_OR_DEFAULTSTRING_OR_DEFAULT');
     });
-
     it.optional('correctly works with no separator & no additionSeparator', () => {
       assert.equal(repeater('REPEATABLE_STRING', { repeatTimes: 2, addition: 'ADDITION', additionRepeatTimes: 3 }), 'REPEATABLE_STRINGADDITION|ADDITION|ADDITION+REPEATABLE_STRINGADDITION|ADDITION|ADDITION');
       assert.equal(repeater('REPEATABLE_STRING', { repeatTimes: 2, addition: 'ADDITION', additionSeparator: '222', additionRepeatTimes: 3 }), 'REPEATABLE_STRINGADDITION222ADDITION222ADDITION+REPEATABLE_STRINGADDITION222ADDITION222ADDITION');
